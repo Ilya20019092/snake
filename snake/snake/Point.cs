@@ -13,7 +13,19 @@ namespace snake
             public char sym;
 
 
+        public Point()
+        {
+            Console.WriteLine("работа");
+        }
 
+
+
+        public Point(int _x , int _y , char _sym )
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
+        }
 
         public void Drow()
         {
