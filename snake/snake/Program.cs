@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using Snake;
 
 namespace snake
 {
@@ -10,57 +12,27 @@ namespace snake
 
 
 
+            HorizLine line1 = new HorizLine(0, 78, 0, '-');
+            line1.Drow();
+
+            vert line2 = new vert(0, 24, 0, ':');
+            line2.Drow();
+
+            HorizLine line3 = new HorizLine(0, 78, 24, '-');
+            line3.Drow();
+
+            vert line4 = new vert(0, 24, 78, ':');
+            line4.Drow();
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-List<int> li1 = new List<int>();
-            for (int i = 0; i < 100; i += 5)
-            {
-                li1.Add(i);
-            }
-            foreach (int i in li1)
-            {
-                Console.WriteLine(i);
-            }
-            Console.ReadLine();
-            int x = li1[0];
-            int y = li1[1];
-            int z = li1[2];
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine(z);
-            Console.ReadLine();
-            li1.RemoveAt(0);
-            li1.RemoveAt(4);
-            li1.RemoveAt(9);
-            li1.RemoveAt(14);
-            Console.ReadLine();
-            foreach (int i in li1)
-            {
-                Console.WriteLine(i);
-            }
             Console.ReadLine();
 
 
 
+               
 
 
 
