@@ -7,12 +7,12 @@ using Snake;
 
 namespace snake
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
 
-            Console.SetBufferSize(80,25);
+            Console.SetBufferSize(80, 25);
 
             HorizLine line1 = new HorizLine(0, 78, 0, '-');
             line1.Drow();
@@ -24,54 +24,23 @@ namespace snake
             line4.Drow();
 
 
-            Point  p = new Point(4,5, '*');
+            Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
+
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.Handlekey(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
 
 
 
-            Console.ReadLine();
-
-
-
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
 
         }
     }
